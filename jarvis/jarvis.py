@@ -19,7 +19,8 @@ def speak(audio):
 
 def wishMe():
     hour = int(datetime.datetime.now().hour)
-    print(hour)
+    strTime = datetime.datetime.now().strftime("%H:%M:%S")    
+    speak(strTime)
     if hour>=0 and hour<12:
         speak("Good Morning!")
 
